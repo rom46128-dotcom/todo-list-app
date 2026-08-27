@@ -1,0 +1,19 @@
+{
+  "name": "todo-list-app",
+  "version": "1.0.0",
+  "description": "تطبيق قائمة مهام حديث مع التخزين المحلي",
+  "main": "app.js",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 3000"
+  },
+  "keywords": [
+    "todo",
+    "list",
+    "tasks",
+    "local-storage",
+    "productivity"
+  ],
+  "author": "GitHub Copilot",
+  "license": "MIT"
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق قائمة المهام</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <!-- الرأس -->
+            <div class="header">
+                <h1>📝 قائمة مهامي</h1>
+                <p class="subtitle">نظم مهامك بكل سهولة</p>
+            </div>
+
+            <!-- شريط الإدخال -->
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    id="todoInput" 
+                    class="todo-input" 
+                    placeholder="أضف مهمة جديدة..."
+                    autocomplete="off"
+                >
+                <button id="addBtn" class="add-btn">✚ إضافة</button>
+            </div>
+
+            <!-- الفلاتر -->
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="active">النشطة</button>
+                <button class="filter-btn" data-filter="completed">المكتملة</button>
+            </div>
+
+            <!-- إحصائيات -->
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">إجمالي المهام:</span>
+                    <span id="totalTodos" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">المكتملة:</span>
+                    <span id="completedTodos" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">المتبقية:</span>
+                    <span id="remainingTodos" class="stat-value">0</span>
+                </div>
+            </div>
+
+            <!-- قائمة المهام -->
+            <ul id="todoList" class="todo-list"></ul>
+
+            <!-- رسالة فارغة -->
+            <div id="emptyMessage" class="empty-message">
+                <p>🎉 لا توجد مهام! استمتع بوقتك</p>
+            </div>
+
+            <!-- أزرار العمل -->
+            <div class="action-buttons">
+                <button id="clearCompletedBtn" class="action-btn clear-btn">🗑️ مسح المكتملة</button>
+                <button id="clearAllBtn" class="action-btn danger-btn">✕ حذف الكل</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
